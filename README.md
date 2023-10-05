@@ -1,6 +1,6 @@
 # Browser Parking Lot
 
-Clean up your browsers tabs into a todo list that can be prioritized using the labels HIGH, MEDIUM, LOW.
+Clean up your browsers tabs onto a centralized page that can be prioritized using the labels HIGH, MEDIUM, LOW.
 
 An item contains:
 - a link
