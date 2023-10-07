@@ -31,7 +31,7 @@ function App() {
       </header>
       <main>
           <ParkingLotForm />
-          <ParkingLotList parkingLotItems={parkingLotItems}/>
+          <ParkingLotList parkingLotItems={ParkingLotItems}/>
       </main>
     </div>
   );
