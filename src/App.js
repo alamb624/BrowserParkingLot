@@ -20,6 +20,22 @@ function App() {
         description: "The Christmas Movie",
     },
   ]);
+
+  let listItems = parkingLotItems.map(
+
+    (item) => `
+    <li>
+       <a href="${item.link}">
+          ${item.description} (${item.date} - ${item.priority})
+       </a>    
+    </li>`
+  ).join('');
+    
+  console.log(listItems);
+
+  let html = `<ul>${listItems}</ul>`;
+
+  console.log(html); 
   
   return (
     <div className="App">
@@ -33,28 +49,6 @@ function App() {
       </main>
     </div>
   );
-  
-  let listItems = parkingLotItems.map(
-
-    (item) => `
-    
-    <li>
-    
-    <a href="${item.link}">
-    
-    ${item.description} (${item.date} - ${item.priority})
-    
-    </a>
-    
-    </li>`
-    
-    ).join('');
-    
-    console.log(listItems);
-    
-    let html = `<ul>${listItems}</ul>`;
-    
-    console.log(html); 
 }
 
 export default App;
