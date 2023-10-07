@@ -29,10 +29,32 @@ function App() {
       </header>
       <main>
           <ParkingLotForm />
-          <ParkingLotList />
+          <ParkingLotList parkingLotItems={parkingLotItems}/>
       </main>
     </div>
   );
+  
+  let listItems = parkingLotItems.map(
+
+    (item) => `
+    
+    <li>
+    
+    <a href="${item.link}">
+    
+    ${item.description} (${item.date} - ${item.priority})
+    
+    </a>
+    
+    </li>`
+    
+    ).join('');
+    
+    console.log(listItems);
+    
+    let html = `<ul>${listItems}</ul>`;
+    
+    console.log(html); 
 }
 
 export default App;
