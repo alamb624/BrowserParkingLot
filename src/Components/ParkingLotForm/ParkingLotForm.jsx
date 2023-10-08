@@ -1,6 +1,8 @@
 import React from 'react';
 import { Form, Button, FormGroup, Label, Input } from 'reactstrap';
 
+import './ParkingLotForm.css';
+
 export default function ParkingLotForm() {
     return (
         <Form data-bs-theme="dark" className="parking-lot-form">

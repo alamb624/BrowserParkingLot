@@ -30,7 +30,7 @@ function App() {
           <p>Take Your Tabs To The Valet!</p>
       </header>
       <main>
-          <ParkingLotForm parkingLotForm={ParkingLotForm}/>
+          <ParkingLotForm/>
           <ParkingLotList parkingLotItems={ParkingLotItems}/>
       </main>
     </div>
