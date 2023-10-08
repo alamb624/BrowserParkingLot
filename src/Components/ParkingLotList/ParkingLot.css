@@ -1,15 +1,16 @@
 .parking-lot-list-container {
     display: flex;  
     flex-wrap: wrap;
-    justify-content: center, space-evenly;
+    justify-content: space-evenly;
+    align-items: center;
     }
     
     .parking-lot-item-container {
       max-width: 30%;
-      background-color: #fff;   
+      background-color: #222;   
       box-shadow: 0px 0px 10px rgba(155, 155, 155, 0.8);
       padding: 1rem;
-      text-align: left;
+      text-align: center;
     }
   
     .parking-lot-item-anchor {
