@@ -1,7 +1,7 @@
 .parking-lot-list-container {
     display: flex;  
     flex-wrap: wrap;
-    justify-content: space-evenly; 
+    justify-content: center, space-evenly;
     }
     
     .parking-lot-item-container {
