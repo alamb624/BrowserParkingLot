@@ -3,7 +3,43 @@ import { Form, Button, FormGroup, Label, Input } from 'reactstrap';
 
 import './ParkingLotForm.css';
 
+const PRIORITIES ={
+    Low: 'Low',
+    Medium: 'Medium',
+    High: 'High'
+}
+
 export default function ParkingLotForm() {
+   
+    const [date, setDate] = useState('');
+    const [link, setLink] = useState(''); 
+    const [description, setDescription] = useState('');
+    const [priority, setPriority] = useState(PRIORITIES.Medium);
+    
+    // const handleChange = setter => (e => setter(e.target.value));
+    // instead of handleDateChange, you can pass handleChange(setDate)
+    
+    function handleDateChange(e) {  
+    setDate(e.target.value);
+    }
+    
+    function handleLinkChange(e) {   
+    setLink(e.target.value);
+    }
+
+    function handleDescriptionChange(e) {
+    setDescription(e.target.value);
+    }
+    
+    function handlePriorityChange(e) {    
+    setPriority(e.target.value);
+    }
+    
+    function handleSubmit(e) { 
+    e.preventDefault();   
+    console.log(date, link, description, priority);
+    }
+   
     return (
         <Form data-bs-theme="dark" className="parking-lot-form">
             <FormGroup className="parking-lot-row">
@@ -71,7 +107,7 @@ export default function ParkingLotForm() {
                     Low
                 </Label>
             </FormGroup>
-                <Button type="submit">
+                <Button className="Submit" type="submit">
                     Submit
                 </Button>
             </Form>
