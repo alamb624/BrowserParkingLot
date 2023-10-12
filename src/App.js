@@ -24,7 +24,7 @@ function App() {
     },
   ]);  
 
-  function addItem(date, link, description, priority) {
+function addItem(date, link, description, priority) {
     setParkingLotItems((oldItems) => [
             ...oldItems, 
            {   
