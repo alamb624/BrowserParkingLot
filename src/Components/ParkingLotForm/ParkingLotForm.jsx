@@ -37,7 +37,14 @@ export default function ParkingLotForm() {
     }
     
     function handleSubmit(e) { 
-    e.preventDefault();   
+    e.preventDefault();
+
+    const [y, M, d] = date.split('-');
+    const fortmattedDate= '${M}/${d}/${y}';
+
+    addItem(formattedDate, link, description, priority);
+    
+    
     console.log(date, link, description, priority);
     }
    
