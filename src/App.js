@@ -23,6 +23,20 @@ function App() {
         description: "The Christmas Movie",
     },
   ]);  
+
+  function addItem(date, link, description, priority) {
+    setParkingLotItems((oldItems) => [
+            ...oldItems, 
+           {   
+              id: nanoid(),
+              date,
+              description,
+              link,
+              priority,
+            },
+       ]);
+    }
+
   return (
     <div className="App">
       <header>
@@ -30,7 +44,7 @@ function App() {
           <p>Take Your Tabs To The Valet!</p>
       </header>
       <main>
-          <ParkingLotForm/>
+          <ParkingLotForm addItem={addItem}/>
           <ParkingLotList parkingLotItems={ParkingLotItems}/>
       </main>
     </div>

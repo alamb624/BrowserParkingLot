@@ -43,8 +43,9 @@ export default function ParkingLotForm() {
     const fortmattedDate= '${M}/${d}/${y}';
 
     addItem(formattedDate, link, description, priority);
+    }
     
-    
+    {
     console.log(date, link, description, priority);
     }
    
