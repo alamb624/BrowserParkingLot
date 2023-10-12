@@ -6,6 +6,19 @@ import ParkingLotList from "./Components/ParkingLotList/ParkingLotList";
 
 import './App.css';
 
+function addItem(date, link, description, priority) {
+  setParkingLotItems((oldItems) => [
+          ...oldItems, 
+          {
+            id: nanoid(),
+            date,
+            description,
+            link,
+            priority,
+          },
+     ]);
+  }
+
 function App() {
   let [ParkingLotItems, setParkingLotItems] = useState([
     {
@@ -23,19 +36,6 @@ function App() {
         description: "The Christmas Movie",
     },
   ]);  
-
-function addItem(date, link, description, priority) {
-    setParkingLotItems((oldItems) => [
-            ...oldItems, 
-           {   
-              id: nanoid(),
-              date,
-              description,
-              link,
-              priority,
-            },
-       ]);
-    }
 
   return (
     <div className="App">
