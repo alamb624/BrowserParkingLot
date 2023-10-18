@@ -10,12 +10,13 @@ const PRIORITIES ={
     High: 'High'
 }
 
-export default function ParkingLotForm() {
+export default function ParkingLotForm({ addItem }) {
    
     const [date, setDate] = useState('');
     const [link, setLink] = useState(''); 
     const [description, setDescription] = useState('');
     const [priority, setPriority] = useState(PRIORITIES.Medium);
+
     
     // const handleChange = setter => (e => setter(e.target.value));
     // instead of handleDateChange, you can pass handleChange(setDate)

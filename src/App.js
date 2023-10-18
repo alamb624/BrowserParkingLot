@@ -23,14 +23,14 @@ function App() {
   let [ParkingLotItems, setParkingLotItems] = useState([
     {
         id: nanoid(),
-        date: "2023-10-04",
+        date: "10/04/2023",
         priority: "Low",
         link: "https://google,com/",
         description: "Knower of All",
     },
     {
         id: nanoid(),
-        date: "2023-12-25",
+        date: "12/25/2023",
         priority: "High",
         link: "https://netflix.com/",
         description: "The Christmas Movie",
