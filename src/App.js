@@ -2,6 +2,7 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 import ParkingLotForm from "./Components/ParkingLotForm/ParkingLotForm";
 import ParkingLotList from "./Components/ParkingLotList/ParkingLotList";
+import ParkingLotItem from "./Components/ParkingLotList/ParkingLotItem";
 
 
 import './App.css';
@@ -36,6 +37,23 @@ function App() {
         description: "The Christmas Movie",
     },
   ]);  
+
+let result = [];
+
+for (let item of parkingLotItems) {
+    result.push(`
+    <li>
+        <a href="${item.link}">
+            ${item.description} (${item.date} - ${item.priority})
+        </a>
+    </li>`);
+} 
+
+console.log(result);
+
+let html = `<ul>${result.join(",")}</ul>`;
+
+console.log(html);
 
   return (
     <div className="App">
