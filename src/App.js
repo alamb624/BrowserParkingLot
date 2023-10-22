@@ -2,7 +2,6 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 import ParkingLotForm from "./Components/ParkingLotForm/ParkingLotForm";
 import ParkingLotList from "./Components/ParkingLotList/ParkingLotList";
-import ParkingLotItem from "./Components/ParkingLotList/ParkingLotItem";
 
 
 import './App.css';
@@ -21,7 +20,7 @@ function addItem(date, link, description, priority) {
   }
 
 function App() {
-  let [ParkingLotItems, setParkingLotItems] = useState([
+  let [ParkingLotItems] = useState([
     {
         id: nanoid(),
         date: "10/04/2023",
@@ -40,7 +39,7 @@ function App() {
 
 let result = [];
 
-for (let item of parkingLotItems) {
+for (let item of ParkingLotItems) {
     result.push(`
     <li>
         <a href="${item.link}">

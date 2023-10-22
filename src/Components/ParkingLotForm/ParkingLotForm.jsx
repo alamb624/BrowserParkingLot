@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from "react";
+import React, { useState }  from 'react';
 import { Form, Button, FormGroup, Label, Input } from 'reactstrap';
 
 import './ParkingLotForm.css';
@@ -10,45 +9,16 @@ const PRIORITIES ={
     High: 'High'
 }
 
-export default function ParkingLotForm({ addItem }) {
+export default function ParkingLotForm() {
    
     const [date, setDate] = useState('');
     const [link, setLink] = useState(''); 
     const [description, setDescription] = useState('');
     const [priority, setPriority] = useState(PRIORITIES.Medium);
 
-    
-    // const handleChange = setter => (e => setter(e.target.value));
-    // instead of handleDateChange, you can pass handleChange(setDate)
-    
-    function handleDateChange(e) {  
+function handledateChange(e) {
     setDate(e.target.value);
-    }
-    
-    function handleLinkChange(e) {   
-    setLink(e.target.value);
-    }
-
-    function handleDescriptionChange(e) {
-    setDescription(e.target.value);
-    }
-    
-    function handlePriorityChange(e) {    
-    setPriority(e.target.value);
-    }
-    
-    function handleSubmit(e) { 
-    e.preventDefault();
-
-    const [y, M, D] = date.split('-');
-    const fortmattedDate= '${M}/${d}/${y}';
-
-    addItem(formattedDate, link, description, priority);
-    }
-    
-    {
-    console.log(date, link, description, priority);
-    }
+}
    
     return (
         <Form data-bs-theme="dark" className="parking-lot-form">
