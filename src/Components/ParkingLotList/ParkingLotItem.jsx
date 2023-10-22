@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ParkingLot.css';
+
 
 export default function ParkingLotItem({ date, priority, link, description }) {
 return (

@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react'
 import { Form, Button, FormGroup, Label, Input } from 'reactstrap';
 
 import './ParkingLotForm.css';
@@ -9,15 +9,43 @@ const PRIORITIES ={
     High: 'High'
 }
 
-export default function ParkingLotForm() {
+export default function ParkingLotForm({ addItem }) {
    
     const [date, setDate] = useState('');
     const [link, setLink] = useState(''); 
     const [description, setDescription] = useState('');
     const [priority, setPriority] = useState(PRIORITIES.Medium);
 
-function handledateChange(e) {
+function handleDateChange(e) {
     setDate(e.target.value);
+}
+
+function handleLinkChange(e) {
+    setLink(e.target.value);
+}
+
+function handleDescriptionChange(e) {
+    setDescription(e.target.value);
+}
+
+function handlePriorityChange(e) {
+    setPriority(e.target.value);
+}
+
+function handleSubmit(e) {
+    e.preventDefault();
+
+    const [y, M, d] = date.split('-');
+    const formattedDate = '${M}/${d}/${y}';
+
+    addItem(formattedDate, link, description, priority);
+
+    setDate('');
+    setLink('');
+    setDescription('');
+    setPriority(PRIORITIES.Medium);
+
+    console.log(date, link, description, priority);
 }
    
     return (
@@ -30,6 +58,8 @@ function handledateChange(e) {
                     id="link-date"
                     name="date"
                     type="date"
+                    value={date}
+                    onChange={handleDateChange}
                     required
                 />
             </FormGroup>
@@ -41,6 +71,8 @@ function handledateChange(e) {
                     id="link-url"
                     name="url"
                     type="url"
+                    value={link}
+                    onChange={handleLinkChange}
                     required
                 />
             </FormGroup>
@@ -52,6 +84,8 @@ function handledateChange(e) {
                     id="link-description"
                     name="description"
                     type="text"
+                    value={description}
+                    onChange={handleDescriptionChange}
                     required
                 />
             </FormGroup>
@@ -61,9 +95,11 @@ function handledateChange(e) {
                     type="radio"
                     value="High"
                     id="prio-high"
+                    checked={priority === PRIORITIES.High}
+                    onChange={handlePriorityChange}
                 />
                 {' '}
-                <Label for="prio-high">
+                <Label for="prio-high" classname="me-3">
                     High
                 </Label>
                 <Input
@@ -71,9 +107,11 @@ function handledateChange(e) {
                     type="radio"
                     value="Medium"
                     id="prio-medium"
+                    checked={priority === PRIORITIES.Medium}
+                    onChange={handlePriorityChange}
                 />
                 {' '}
-                <Label for="prio-medium">
+                <Label for="prio-medium" classname="me-3">
                     Medium
                 </Label>
                 <Input
@@ -81,13 +119,19 @@ function handledateChange(e) {
                     type="radio"
                     value="Low"
                     id="prio-low"
+                    checked={priority === PRIORITIES.Low}
+                    onChange={handlePriorityChange}
                 />
                 {' '}
-                <Label for="prio-low">
+                <Label for="prio-low" classname="me-3">
                     Low
                 </Label>
             </FormGroup>
-                <Button className="Submit" type="submit">
+                <Button 
+                className="Submit" 
+                type="submit"
+                onChange={handleSubmit}
+                >
                     Submit
                 </Button>
             </Form>
