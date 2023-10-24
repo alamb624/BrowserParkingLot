@@ -19,15 +19,16 @@ function addItem(date, link, description, priority) {
      ]);
   }
 
-function App() {
-  let [ParkingLotItem, setParkingLotItem ] = useState([
+function App() { 
+let [ParkingLotItem, setParkingLotItem ] = useState([
     {
         id: nanoid(),
         date: "04/10/2023",
         priority: "Low",
-        link: "https://google,com/",
+        link: "https://google.com",
         description: "Knower of All",
     },
+   
     {
         id: nanoid(),
         date: "25/12/2023",
@@ -35,7 +36,7 @@ function App() {
         link: "https://netflix.com/",
         description: "The Christmas Movie",
     },
-    setParkingLotItem(useState)
+  setParkingLotItem(olditems)
   ]);  
 
 let result = [];
