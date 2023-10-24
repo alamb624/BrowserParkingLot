@@ -2,7 +2,6 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 import ParkingLotForm from "./Components/ParkingLotForm/ParkingLotForm";
 import ParkingLotList from "./Components/ParkingLotList/ParkingLotList";
-import setParkingLotItem from "./Components/ParkingLotItem/ParkingLotItem";
 
 
 import './App.css';
