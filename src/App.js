@@ -2,12 +2,13 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 import ParkingLotForm from "./Components/ParkingLotForm/ParkingLotForm";
 import ParkingLotList from "./Components/ParkingLotList/ParkingLotList";
+import setParkingLotItem from "./Components/ParkingLotItem/ParkingLotItem";
 
 
 import './App.css';
 
 function addItem(date, link, description, priority) {
-  setParkingLotItems((oldItems) => [
+  setParkingLotItem((oldItems) => [
           ...oldItems, 
           {
             id: nanoid(),
@@ -20,26 +21,27 @@ function addItem(date, link, description, priority) {
   }
 
 function App() {
-  let [ParkingLotItems] = useState([
+  let [ParkingLotItem, setParkingLotItem ] = useState([
     {
         id: nanoid(),
-        date: "10/04/2023",
+        date: "04/10/2023",
         priority: "Low",
         link: "https://google,com/",
         description: "Knower of All",
     },
     {
         id: nanoid(),
-        date: "12/25/2023",
+        date: "25/12/2023",
         priority: "High",
         link: "https://netflix.com/",
         description: "The Christmas Movie",
     },
+    setParkingLotItem(useState)
   ]);  
 
 let result = [];
 
-for (let item of ParkingLotItems) {
+for (let item of ParkingLotItem) {
     result.push(`
     <li>
         <a href="${item.link}">
@@ -62,7 +64,7 @@ console.log(html);
       </header>
       <main>
           <ParkingLotForm addItem={addItem}/>
-          <ParkingLotList parkingLotItems={ParkingLotItems}/>
+          <ParkingLotList parkingLotItem={ParkingLotItem}/>
       </main>
     </div>
   );

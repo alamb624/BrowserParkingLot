@@ -1,7 +1,6 @@
 import React from 'react';
 
 
-
 export default function ParkingLotItem({ date, priority, link, description }) {
 return (
     <section className="parking-lot-item-container">
