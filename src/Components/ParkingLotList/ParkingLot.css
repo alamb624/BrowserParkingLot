@@ -2,20 +2,20 @@
     display: flex;  
     flex-wrap: wrap;
     justify-content: space-evenly;
-    }
+}
     
-    .parking-lot-item-container {
-      max-width: 30%;
-      background-color: #2222226b;   
-      box-shadow: 0px 0px 10px rgba(155, 155, 155, 0.8);
-      padding: 1rem;
-      text-align: left ;
-    }
+.parking-lot-item-container {
+    max-width: 30%;
+    background-color: #2222226b;   
+    box-shadow: 0px 0px 10px rgba(155, 155, 155, 0.8);
+    padding: 1rem;
+    text-align: left ;
+}
   
-    .parking-lot-item-anchor { 
+.parking-lot-item-anchor { 
     color: gold;
-    }
+}
     
-    .parking-lot-item-anchor:visited { 
+.parking-lot-item-anchor:visited { 
     color: goldenrod;
-    }
+}

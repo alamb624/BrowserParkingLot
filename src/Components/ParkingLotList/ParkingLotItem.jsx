@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './ParkingLot.css';
+import "./ParkingLot.css";
 
-export default function ParkingLotItem({ id, date, priority, link, description }) 
-{
+export default function ParkingLotItem({ id, date, priority, link, description }) {
+
 return (
     <section className="parking-lot-item-container">
         <p className="parking-lot-item-field">Date: { date }</p>

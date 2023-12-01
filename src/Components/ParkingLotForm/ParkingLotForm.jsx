@@ -3,7 +3,7 @@ import { Form, Button, FormGroup, Label, Input } from 'reactstrap';
 
 import './ParkingLotForm.css';
 
-const PRIORITIES ={
+const PRIORITIES = {
     Low: 'Low',
     Medium: 'Medium',
     High: 'High'
@@ -127,13 +127,10 @@ function handleSubmit(e) {
                     Low
                 </Label>
             </FormGroup>
-                <Button 
-                className="Submit" 
-                type="submit"
-                onChange={handleSubmit}
-                >
-                    Submit
+                <Button type="submit">
+                  Submit
                 </Button>
             </Form>
-);
+        );
 }
+
