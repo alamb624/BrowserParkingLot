@@ -7,23 +7,23 @@ import ParkingLotList from "./Components/ParkingLotList/ParkingLotList";
 import './App.css';
 
 function addItem(date, link, description, priority) {
-  setParkingLotItem((oldItems) => [
+    setParkingLotItem(oldItems => [
           ...oldItems, 
           {
-            id: nanoid(),
-            date,
-            description,
-            link,
-            priority,
+              id: nanoid(),
+              date,
+              description,
+              link,
+              priority,
           },
      ]);
-  }
+}
 
 function App() { 
-let [ParkingLotItem, setParkingLotItem ] = useState([
+let [ParkingLotItem, setParkingLotitem] = useState([
     {
         id: nanoid(),
-        date: "04/10/2023",
+        date: "10/04/2023",
         priority: "Low",
         link: "https://google.com",
         description: "Knower of All",
@@ -31,13 +31,12 @@ let [ParkingLotItem, setParkingLotItem ] = useState([
    
     {
         id: nanoid(),
-        date: "25/12/2023",
+        date: "12/25/2023",
         priority: "High",
         link: "https://netflix.com/",
         description: "The Christmas Movie",
     },
-  setParkingLotItem(olditems)
-  ]);  
+  ]); 
 
 let result = [];
 
@@ -59,7 +58,8 @@ console.log(html);
   return (
     <div className="App">
       <header>
-          <h1> Browser Parking Lot</h1>
+          <h1>                </h1>
+          <h2> Browser Parking Lot</h2>
           <p>Take Your Tabs To The Valet!</p>
       </header>
       <main>
@@ -69,5 +69,7 @@ console.log(html);
     </div>
   );
 }
+
+
 
 export default App;

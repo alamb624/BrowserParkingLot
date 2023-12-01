@@ -36,7 +36,7 @@ function handleSubmit(e) {
     e.preventDefault();
 
     const [y, M, d] = date.split('-');
-    const formattedDate = '${M}/${d}/${y}';
+    const formattedDate = `${M}/${d}/${y}`;
 
     addItem(formattedDate, link, description, priority);
 
