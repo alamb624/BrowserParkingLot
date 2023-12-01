@@ -20,6 +20,7 @@ function App() {
                 },
         ]);
     }
+
     let [ParkingLotItem, setParkingLotItem] = useState([
     {
         id: nanoid(),
