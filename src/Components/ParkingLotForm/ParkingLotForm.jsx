@@ -128,9 +128,10 @@ function handleSubmit(e) {
                 </Label>
             </FormGroup>
                 <Button 
+                classname="submit"
                 name="submit"
                 type="submit"
-                onChange={handleSubmit}>
+                onChange={handleSubmit}> 
                   Submit
                 </Button>
             </Form>

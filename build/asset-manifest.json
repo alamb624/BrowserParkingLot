@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/BrowserParkingLot/static/css/main.eaba7845.css",
+    "main.js": "/BrowserParkingLot/static/js/main.89d69640.js",
+    "static/media/parking.png": "/BrowserParkingLot/static/media/parking.661b7a50eaf7613c3c26.png",
+    "index.html": "/BrowserParkingLot/index.html",
+    "main.eaba7845.css.map": "/BrowserParkingLot/static/css/main.eaba7845.css.map",
+    "main.89d69640.js.map": "/BrowserParkingLot/static/js/main.89d69640.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eaba7845.css",
+    "static/js/main.89d69640.js"
+  ]
+}
