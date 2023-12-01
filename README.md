@@ -1,6 +1,6 @@
-# Browser Parking Lot
+Hosting link: https://alamb624.github.io/BrowserParkingLot/
 
-Hosting link: `https://alamb624.github.io/BrowserParkingLot/`
+# Browser Parking Lot
 
 Clean up your browsers tabs onto a centralized page that can be prioritized using the labels HIGH, MEDIUM, LOW.
 
